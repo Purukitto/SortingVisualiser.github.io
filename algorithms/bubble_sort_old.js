@@ -1,35 +1,34 @@
 let values = [];
 let i = 0;
 let j = 0;
-let w = 10;
 
 function setup() {
     createCanvas(windowWidth, windowHeight);
-    values = new Array(floor(width / w));
+    values = new Array(width);
     for (let i = 0; i < values.length; i++) {
         values[i] = random(height);
     }
-    frameRate(10);
 }
 
 function draw() {
-    background(51);
-    if (i < values.length - 1) {
-        var min = i;
-        for (var j = i; j < values.length; j++) {
-            if (values[j] < values[min]) min = j;
+    background(255);
+    i = 0;
+    if (i < values.length) {
+        for (let j = 0; j < values.length - i - 1; j++) {
+            if (values[j] > values[j + 1]) {
+                swap(values, j, j + 1);
+            }
         }
-        swap(values, i, min);
     } else {
         console.log("finished");
         noLoop();
     }
     i++;
 
+
     for (let i = 0; i < values.length; i++) {
-        stroke(0);
-        fill(255);
-        rect(i * w, height - values[i], w, values[i]);
+        stroke(235, 70, 52);
+        line(i, height, i, height - values[i]);
     }
 }
 
