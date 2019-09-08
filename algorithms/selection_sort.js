@@ -9,7 +9,7 @@ function setup() {
     for (let i = 0; i < values.length; i++) {
         values[i] = random(height);
     }
-    frameRate(10);
+    frameRate(15);
 }
 
 function draw() {

@@ -53,7 +53,7 @@ async function partition(arr, start, end) {
 }
 
 function draw() {
-    background(0);
+    background(51);
 
     for (let i = 0; i < values.length; i++) {
         noStroke();
@@ -69,7 +69,7 @@ function draw() {
 }
 
 async function swap(arr, a, b) {
-    await sleep(100);
+    await sleep(75);
     let temp = arr[a];
     arr[a] = arr[b];
     arr[b] = temp;
