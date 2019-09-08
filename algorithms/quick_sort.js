@@ -3,7 +3,7 @@ let w = 10;
 let states = [];
 
 function setup() {
-    createCanvas(windowWidth, windowHeight);
+    createCanvas(windowWidth - 16, windowHeight - 65);
     values = new Array(floor(width / w));
     for (let i = 0; i < values.length; i++) {
         values[i] = random(height);
