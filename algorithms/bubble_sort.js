@@ -26,9 +26,8 @@ function draw() {
     }
     i++;
 
-
     for (let i = 0; i < values.length; i++) {
-        stroke(0);
+        noStroke();
         fill(255);
         rect(i * w, height - values[i], w, values[i]);
     }

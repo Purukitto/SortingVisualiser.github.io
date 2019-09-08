@@ -18,7 +18,6 @@ async function quickSort(arr, start, end) {
     }
     let index = await partition(arr, start, end);
     states[index] = -1;
-
     await Promise.all([
         quickSort(arr, start, index - 1),
         quickSort(arr, index + 1, end)
@@ -48,7 +47,6 @@ async function partition(arr, start, end) {
             states[i] = -1;
         }
     }
-
     return pivotIndex;
 }
 
