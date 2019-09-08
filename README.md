@@ -1,1 +1,2 @@
-﻿# Sorting Visualiser
+﻿# Projects published:
+ * ## Sorting Visualiser
